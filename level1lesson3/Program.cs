@@ -46,6 +46,10 @@ namespace Level1Space
                     return 0;
                 }
             }
+            if (L == (N * M))
+            {
+                return 1;
+            }
 
                 int[,] pole = new int[N, M];
                 //int[] zahvat(int[] desant, int[,] pole)
@@ -62,6 +66,7 @@ namespace Level1Space
            
 
             int chet = 1;
+
             for (int i = 0; i < N; i++)
             {
                 for (int j = 0; j < M; j++)
@@ -134,37 +139,37 @@ namespace Level1Space
         }
         //static void Main(string[] args)
         //{
-        //    int N = 5;
-        //    int M = 7;
-        //    int[,] pole = new int[N, M];
+        //    //    int N = 5;
+        //    //    int M = 7;
+        //    //    int[,] pole = new int[N, M];
         //    int chet1;
-        //    int[] test = { 5,1, 1,7 };
-        //    int[] desant = test;
-        //    int strminus, strplus, stroka;
-        //    int stlplus, stlminus, stolbets;
+        //      int[] test = { 1, 1 };
+        //    //    int[] desant = test;
+        //    //    int strminus, strplus, stroka;
+        //    //    int stlplus, stlminus, stolbets;
 
-        //    //int[] pokolenie1 = new int[4 * desant.Length];
+        //    //    //int[] pokolenie1 = new int[4 * desant.Length];
 
-        //    int pc = 0;
-        //    int i1, i2, i3, i4, j1, j2, j3, j4;
-        //    i1 = i2 = i3 = i4 = j1 = j2 = j3 = j4 = -1;
-
-           
+        //    //    int pc = 0;
+        //    //    int i1, i2, i3, i4, j1, j2, j3, j4;
+        //    //    i1 = i2 = i3 = i4 = j1 = j2 = j3 = j4 = -1;
 
 
-        //    chet1 = ConquestCampaign(5, 7, 2, test);
-        //    Console.WriteLine(chet1);
-            //for (int n = 0; n < N; n++)
-            //{
-            //    for (int m = 0; m < M; m++)
-            //    {
-            //        Console.Write(pole1[n, m] + " ");
-            //    }
-            //    Console.WriteLine("");
-            //}
-            //  Console.WriteLine($"znachenie chet= {chet}");
-           // }
 
-       
+
+        //   chet1 = ConquestCampaign(2,3,1,test);
+        //        Console.WriteLine(chet1);
+        //    //for (int n = 0; n < N; n++)
+        //    //{
+        //    //    for (int m = 0; m < M; m++)
+        //    //    {
+        //    //        Console.Write(pole1[n, m] + " ");
+        //    //    }
+        //    //    Console.WriteLine("");
+        //    //}
+        //    //Console.WriteLine($"znachenie chet= {chet1}");
+        //  }
+
+
     }
 }
