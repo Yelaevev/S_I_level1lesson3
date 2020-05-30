@@ -18,11 +18,11 @@ namespace Level1Space
                 return 0;
             }
 
-            if (N == M)
-            {
-                Console.WriteLine("initial conditions is falls");
-                return 0;
-            }
+            //if (N == M)
+            //{
+            //    Console.WriteLine("initial conditions is falls");
+            //    return 0;
+            //}
             if ((N <= 0) || (M <= 0))
             {
                 Console.WriteLine("initial conditions is falls");
@@ -139,26 +139,24 @@ namespace Level1Space
         }
         //static void Main(string[] args)
         //{
-        //    //    int N = 5;
-        //    //    int M = 7;
-        //    //    int[,] pole = new int[N, M];
-        //    int chet1;
-        //      int[] test = { 1, 1 };
-        //    //    int[] desant = test;
-        //    //    int strminus, strplus, stroka;
-        //    //    int stlplus, stlminus, stolbets;
+            
+        //      int chet1;
+        //        int[] test = { 3, 3, 3, 3, 3, 3, 3, 3, };
+            //    //    int[] desant = test;
+            //    //    int strminus, strplus, stroka;
+            //    //    int stlplus, stlminus, stolbets;
 
-        //    //    //int[] pokolenie1 = new int[4 * desant.Length];
+            //    //    //int[] pokolenie1 = new int[4 * desant.Length];
 
-        //    //    int pc = 0;
-        //    //    int i1, i2, i3, i4, j1, j2, j3, j4;
-        //    //    i1 = i2 = i3 = i4 = j1 = j2 = j3 = j4 = -1;
+            //    //    int pc = 0;
+            //    //    int i1, i2, i3, i4, j1, j2, j3, j4;
+            //    //    i1 = i2 = i3 = i4 = j1 = j2 = j3 = j4 = -1;
 
 
 
 
-        //   chet1 = ConquestCampaign(2,3,1,test);
-        //        Console.WriteLine(chet1);
+            //chet1 = ConquestCampaign(5,5,4,test);
+            // Console.WriteLine(chet1);
         //    //for (int n = 0; n < N; n++)
         //    //{
         //    //    for (int m = 0; m < M; m++)
@@ -168,7 +166,7 @@ namespace Level1Space
         //    //    Console.WriteLine("");
         //    //}
         //    //Console.WriteLine($"znachenie chet= {chet1}");
-        //  }
+         //}
 
 
     }
