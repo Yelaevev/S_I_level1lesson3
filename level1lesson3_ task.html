@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0041)https://skillsmart.ru/algo/lvl1/i082.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>level 1</title>
+
+
+ <style>
+.block1 { width: 200px; background: #ccc; padding: 5px; padding-right: 20px; border: solid 1px black; float: left }
+.block2 { width: 200px; background: #fc0; padding: 5px; border: solid 1px #aaa; padding-top: 10px; top: 40px; left: -30px; }
+
+.SimpleText {
+ font-family: "Arial", Arial, monospace; font-size: 12pt; text-align: left; 
+}
+
+.T1 { background-color: #ffffff; 
+padding-top: 10px; padding-bottom: 3px; 
+font-family: "Courier New", Courier, monospace; font-size: 15pt; text-align: right; 
+border-bottom: 1px solid #aaaaaa; font-weight: bold; 
+
+margin-right: 8px; 
+margin-left: 5px; 
+}
+
+div.box { background-color: white; 
+ font-family: "Microsoft Sans Serif", Sans Serif, monospace; font-size: 14pt; text-align: left; 
+
+border: solid #aaa; border-width: 1px; 
+width: 95% ;
+padding-left: 5px;  
+padding: 0.5em;
+margin-top: 8px; 
+margin-left: 8px; 
+margin-bottom: 3px;
+}
+
+div.boxleft {
+font-family: "Microsoft Sans Serif", Sans Serif, monospace; font-size: 8pt; text-align: left; 
+background-color: #f5fffa; 
+border: solid #aaa; border-width: 1px; 
+padding: 2px;
+margin-left: 1px; 
+margin-right: 5px; 
+margin-bottom: 2px;
+}
+
+div.boxright {
+font-family: "Microsoft Sans Serif", Sans Serif, monospace; font-size: 8pt; text-align: left; 
+background-color: #f5fffa; 
+border: solid #aaa; border-width: 1px; 
+padding: 2px;
+margin-right: 5px; 
+margin-bottom: 2px;
+margin-left: 5px; 
+
+}
+
+</style>
+
+<script type="text/javascript" language="JavaScript">
+<!--
+function Hide(id)
+{
+ if(document.getElementById(id).style.display == 'none')  {
+   document.getElementById(id).style.display='';  }
+ else  {
+   document.getElementById(id).style.display='none';  }
+}
+//-->
+</script>
+
+</head>
+
+<body bgcolor="#f9f9f9">
+
+<!--- самая внешняя таблица-две вложенные --->
+<table cellspacing="0" cellpadding="0" border="0" width="100%" align="left">
+<tbody><tr><td valign="top">
+<table cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+
+<td width="10%" valign="top"> <!--- Таблицы левой колонки --->
+
+   <!--- Самая верхняя --->
+ <!--- колонка из таблиц --->
+
+<p>
+
+</p></td></tr></tbody></table><p>
+
+
+<table cellspacing="10" cellpadding="10" border="0" width="100%">
+<tbody><tr><td bgcolor="#f9f9f9" align="left">
+
+<!--- --->
+<p>
+
+
+&nbsp;
+</p><p>
+</p></td></tr></tbody></table>
+
+<!---  Конец левой колонки --->
+
+</p></td>
+
+<td width="80%" valign="top"> <!--- Таблицы центральной колонки --->
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%" align="right">
+<tbody><tr>
+<td width="10%" bgcolor="#aaaaaa" valign="top">
+
+<table cellspacing="1" cellpadding="50" border="0" width="100%">
+<tbody><tr><td bgcolor="#f5faff">
+
+<p>
+
+
+</p><div class="box">
+<div class="T1">
+<h2>
+Освобождение Государства Квадратов
+</h2>
+</div>
+<p>
+
+Государство Кругов подготовило группу элитных десантников, которые должны в кратчайший срок спасти соседнюю братскую страну -- Государство Квадратов, где внезапно начались гражданские бунты против интернета. Территория Государства Квадратов представляет собой прямоугольник из NxM квадратных областей, где каждая область имеет координаты 1 .. N , 1 .. M.
+</p><p>
+Десантники в день 1 высаживаются в L областей, заданных их координатами (x1, y1), (x2,y2), ... , (xl, yl) и защищают их от бунтовщиков. На следующий день (день 2) они захватывают все соседние области, прилегающие к этим областям с четырёх сторон (по вертикали и горизонтали), и далее каждый следующий день этот процесс повторяется, пока не будут взяты под контроль все бунтующие области без исключения.
+</p><p>
+Генштаб Государства Кругов требует точный план освобождения Государства Квадратов -- на какой день оно будет полностью контролироваться десантниками.
+</p><p>
+Например:</p><p>
+<img src="./level1lesson3_ task_files/3.png">
+</p><p>
+В первый день под контроль взяты две области (заштрихованы); во второй -- 8 областей 
+(две с первого дня, сплошные синие, и шесть в текущий день, заштрихованы). <br>
+В третий день (результирующее значение -- 3) вся территория Государства Квадратов оказывается под контролем десантников. 
+
+
+
+</p><p></p><hr><p>
+Функция 
+
+</p><pre>int ConquestCampaign(int N, int M, int L, int [] battalion) 
+</pre>
+
+получает первыми двумя параметрами размер Государства Квадратов NxM,
+а battalion содержит 
+массив из L*2 целых чисел (L &gt;= 1) с индексацией с нуля,
+в котором каждый чётный элемент содержит очередную координату области высадки по первому измерению N,
+а каждый нечётный элемент содержит очередную координату области высадки по второму измерению M.
+<br>Не исключено, что в связи с неразберихой в командовании координаты областей высадки могут дублироваться.
+<p>
+На примере с картинки параметры будут такими: N = 3, M = 4, L = 2, battalion = [2,2, 3,4]
+</p><p>
+Возвращает функция день, начиная с 1, когда все области будут взяты под контроль.
+</p><p>
+<a href="https://skillsmart.ru/algo/lvl1/how.html">как постить решение</a>
+
+
+</p></div>
+
+</td>
+</tr>
+</tbody></table>
+
+</td>
+</tr>
+</tbody></table>
+
+</td>
+<td width="10%" valign="top"> <!--- Таблицы правой колонки --->
+
+<table cellspacing="1" cellpadding="10" border="0" width="100%">
+<tbody><tr><td bgcolor="#f5faff">
+
+<center>
+<!--- --->
+</center><p>
+
+</p></td></tr></tbody></table>
+
+
+
+<!---  Конец правой колонки --->
+
+
+</td></tr></tbody></table>
+
+
+<!--- нижняя строка --->
+
+
+
+</body></html>
